@@ -1,0 +1,44 @@
+name: Bug report
+description: Something in Exployer does not work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please do **not** attach personal files; a screenshot and the exact steps are enough.
+  - type: input
+    id: version
+    attributes:
+      label: Exployer version
+      description: Settings → About, or the release you installed
+      placeholder: 0.9.37 (versionCode 47)
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: Samsung A52, Android 14
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or a log (optional)
+      description: Long-press the message to copy an error text, or attach a screenshot

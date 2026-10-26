@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Feature guide and download page
+    url: https://balochscript.com/exployer-android-file-manager-video-downloader/
+    about: Every feature explained with the exact steps
+  - name: Questions by email
+    url: mailto:balochscript@gmail.com
+    about: For anything that is not a bug report
