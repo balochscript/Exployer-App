@@ -44,15 +44,16 @@ Both files are signed with the same key and can update each other. Both are vers
 
 ## Screenshots
 
-| Files | Play a whole folder | Downloader |
-|---|---|---|
-| <img src="docs/screenshots/01-files-home.jpg" width="230" alt="Exployer file manager home screen with storage card, seven categories and tools"> | <img src="docs/screenshots/03-play-and-sort.jpg" width="230" alt="Play every song and video in a folder in nine different orders"> | <img src="docs/screenshots/06-media-sniffer.jpg" width="230" alt="Media sniffer listing every video and audio stream on a page with its exact size"> |
-| **Browser with an ad blocker** | **Photo editor** | **ZIP reader** |
-| <img src="docs/screenshots/07-browser-tabs.jpg" width="230" alt="Android browser with tab groups and data-saver counter"> | <img src="docs/screenshots/09-editor.jpg" width="230" alt="Photo editor with tone curves, filters and perspective correction"> | <img src="docs/screenshots/11-zip-reader.jpg" width="230" alt="Open and browse a ZIP archive without extracting it"> |
+| | | | |
+|---|---|---|---|
+| <img src="docs/screenshots/01-files-and-tags.jpg" width="210" alt="Tag list with colours, counts and the MultiTagPlay selection bar"> | <img src="docs/screenshots/02-folder-play.jpg" width="210" alt="Folder play menu with nine orders, kind chips and continue previous playback"> | <img src="docs/screenshots/03-files-home.jpg" width="210" alt="File manager home with storage card, eight categories, recent files and tools"> | <img src="docs/screenshots/04-downloads.jpg" width="210" alt="Download queue with speed, percentage, scheduled item and duplicate detection"> |
+| **Tags and MultiTagPlay** | **Play a whole folder** | **Every file in one place** | **Download queue** |
+| <img src="docs/screenshots/05-browser.jpg" width="210" alt="Browser with tab groups, data saver counter, privacy chips and per-site permissions"> | <img src="docs/screenshots/06-zip.jpg" width="210" alt="ZIP reader browsing inside an archive with extract and play options"> | <img src="docs/screenshots/07-editor.jpg" width="210" alt="Photo editor with crop handles, tone curve and slider, draft and background export"> | <img src="docs/screenshots/08-encrypted-folder.jpg" width="210" alt="Encrypted folder container locked with a password, listing .enx files inside"> |
+| **Browser with the tools built in** | **Browse inside a ZIP** | **Photo editor** | **Encrypted folder** |
 
-More screens: [download queue](docs/screenshots/05-downloads.jpg) · [global search](docs/screenshots/02-global-search.jpg) ·
-[video player](docs/screenshots/04-video-player.jpg) · [browser home](docs/screenshots/08-browser-home.jpg) ·
-[settings](docs/screenshots/10-settings.jpg) · [music library](docs/screenshots/12-music-library.jpg)
+All eight are 1080 × 1920. They are rendered from the app's own design system — the same palette,
+line icons, spacing and labels the app uses — so nothing on them is invented. How they are built is
+described in [docs/screenshots/README.md](docs/screenshots/README.md).
 
 ---
 
