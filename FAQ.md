@@ -2,9 +2,17 @@
 
 ### Is Exployer really free?
 
-Yes. There is no account, no subscription and no paid tier. The app is supported by ads; watching
-five rewarded videos gives you seven days without ads. The counter uses a 24-hour window and warns
-you before it resets.
+Yes. There is no account, no subscription and no paid tier. The app is supported by ads, and rewarded
+videos turn them off: **one completed video gives 24 hours without ads, and five videos inside those
+24 hours give a full week**. The counter starts with your first video, shows how many videos are left,
+and warns you before it resets.
+
+### Which file should I download — the 9.1 MB one or the 18.0 MB one?
+
+Start with `exployer-0.9.103.apk` (9.1 MB). It is the same app, shrunk and optimised with R8. The
+`-nor8` build is the identical code without minification and exists only as a fallback for a device
+where the small build misbehaves. Both are signed with the same key, both are versionCode 113, and they
+can update each other.
 
 ### Does it need root?
 
@@ -12,13 +20,13 @@ No. It uses Android's **All files access** permission, which you grant once on f
 
 ### Which Android versions are supported?
 
-Android 8.0 (API 26) and newer, including Android 13–16 with the newer media permissions.
+Android 8.0 (API 26) and newer, including Android 13–16 with the newer media permissions. The app
+targets API 36.
 
 ### Does it work offline?
 
 The file manager, both players, the photo and video editor, the ZIP reader and the vault work with no
-connection at all. Only the browser, the ad-blocker filter updates and the video downloader need a
-network.
+connection at all. Only the browser and the video downloader need a network.
 
 ### Can I download videos from Instagram, YouTube or TikTok?
 
@@ -35,30 +43,52 @@ it; Exployer reports the real reason instead of failing silently.
 ### Where are my downloads saved?
 
 By default to `Downloads/Exployer`, split into subfolders for video, audio, images and files. You can
-change the destination folder in Settings.
+change the destination folder in the download settings.
 
 ### Can I recover a file I deleted?
 
 Yes, if you deleted it inside Exployer: it goes to the recycle bin and stays recoverable for up to
 30 days. Files deleted by other apps never reach that bin.
 
+### What are tags, and how do I use them?
+
+Tags are your own labels for files and folders. Add one from the file list, from the Now Playing
+screen, or while viewing a photo or video, so you never have to leave what you are doing. You can tag
+several files at once, give a tag one of ten colours, sort tags five ways, and play everything under a
+single tag. Long-press several tags to play them together — this is called MultiTagPlay, and a file
+that belongs to two selected tags is played only once.
+
+### What happens to my encrypted files from older versions?
+
+Files ending in `.enc` are still readable. Rename them to `.enx` (for example `report.pdf.enc` →
+`report.pdf.enx`) and the app will recognise them. New files are always sealed in the `.enx` format:
+AES-256-GCM in chunks with a PBKDF2-derived key. A folder you encrypted can be opened like a normal
+folder — one password prompt, then you browse it.
+
+### Can Exployer open a password-protected ZIP?
+
+No. Standard ZIP archives are fully supported — browsing, extracting, adding files and playing media
+inside the archive — but encrypted ZIPs are not.
+
 ### Does it have a dark theme?
 
-Yes. Follow the system theme, or force light or dark, and pick one of five accent colours.
+Yes. Follow the system theme, or force light or dark, and pick one of five accent palettes.
 
 ### Does the app work right-to-left?
 
-Yes — it is built RTL-first. Every bundled translation is complete and the interface language can be
-changed in Settings.
+Yes — it is built RTL-first. Eight interface languages are bundled (Persian, English, Spanish, Brazilian
+Portuguese, Indonesian, Hindi, Arabic, Urdu) and the interface language can be changed in Settings,
+independently of the phone's language. Notifications follow the same choice.
 
 ### How do I remove the ads?
 
-Watch five rewarded videos in the ads section: you get seven days without ads.
+Watch rewarded videos in the ads section: one video gives 24 hours without ads, five videos inside
+those 24 hours give a full week.
 
 ### Are my files uploaded anywhere?
 
 No. Files, playback history, tags, recycle-bin entries and the vault stay on the device. Camera,
-microphone and location are only exposed to a site you opened, only after you approve it.
+microphone and location are only exposed to a site you opened, only after you approve it for that site.
 
 ### Is it safe to install the APK from here?
 
@@ -68,4 +98,5 @@ same key, so a tampered file would be rejected by Android on update.
 
 ### Is Exployer on Google Play or Cafe Bazaar?
 
-A Cafe Bazaar release is in progress. This repository always hosts the newest signed APK first.
+It is published on Cafe Bazaar (`com.balochscript.exployer`); that listing can lag a few versions
+behind. This repository always hosts the newest signed APK first.
