@@ -29,6 +29,18 @@
   <a href="#verify">Verify the hash</a>
 </p>
 
+<p align="center">
+  <b>Read this in:</b>
+  <a href="README.md">English</a> ·
+  <a href="README.fa.md">فارسی</a> ·
+  <a href="README.es.md">Español</a> ·
+  <a href="README.pt-BR.md">Português (BR)</a> ·
+  <a href="README.id.md">Bahasa Indonesia</a> ·
+  <a href="README.hi.md">हिन्दी</a> ·
+  <a href="README.ar.md">العربية</a> ·
+  <a href="README.ur.md">اردو</a>
+</p>
+
 ---
 
 ## Two builds, same features
@@ -46,14 +58,14 @@ Both files are signed with the same key and can update each other. Both are vers
 
 | | | | |
 |---|---|---|---|
-| <img src="docs/screenshots/01-files-and-tags.jpg" width="210" alt="Tag list with colours, counts and the MultiTagPlay selection bar"> | <img src="docs/screenshots/02-folder-play.jpg" width="210" alt="Folder play menu with nine orders, kind chips and continue previous playback"> | <img src="docs/screenshots/03-files-home.jpg" width="210" alt="File manager home with storage card, eight categories, recent files and tools"> | <img src="docs/screenshots/04-downloads.jpg" width="210" alt="Download queue with speed, percentage, scheduled item and duplicate detection"> |
-| **Tags and MultiTagPlay** | **Play a whole folder** | **Every file in one place** | **Download queue** |
-| <img src="docs/screenshots/05-browser.jpg" width="210" alt="Browser with tab groups, data saver counter, privacy chips and per-site permissions"> | <img src="docs/screenshots/06-zip.jpg" width="210" alt="ZIP reader browsing inside an archive with extract and play options"> | <img src="docs/screenshots/07-editor.jpg" width="210" alt="Photo editor with crop handles, tone curve and slider, draft and background export"> | <img src="docs/screenshots/08-encrypted-folder.jpg" width="210" alt="Encrypted folder container locked with a password, listing .enx files inside"> |
-| **Browser with the tools built in** | **Browse inside a ZIP** | **Photo editor** | **Encrypted folder** |
+| <img src="docs/screenshots/en/01-file-manager.jpg" width="210" alt="File manager home — storage card, eight categories, three tools, multi-select"> | <img src="docs/screenshots/en/02-folder-play.jpg" width="210" alt="Folder play menu with nine orders, kind chips and continue previous playback"> | <img src="docs/screenshots/en/03-video-player.jpg" width="210" alt="Video player with brightness, volume, speed and seek under your thumb"> | <img src="docs/screenshots/en/04-music.jpg" width="210" alt="Music library, queue and the built-in equalizer"> |
+| **File manager** | **Play a whole folder** | **Video player** | **Music player** |
+| <img src="docs/screenshots/en/05-tags.jpg" width="210" alt="Tags — label, colour, play; quick tagging while browsing; multi-tag playback"> | <img src="docs/screenshots/en/06-browser.jpg" width="210" alt="Browser — the menu toolkit, tab groups and the password vault"> | <img src="docs/screenshots/en/07-downloads.jpg" width="210" alt="Downloads — list and filters, schedule dialog, settings and honest errors"> | |
+| **Tags** | **Browser** | **Downloads** | |
 
-All eight are 1080 × 1920. They are rendered from the app's own design system — the same palette,
-line icons, spacing and labels the app uses — so nothing on them is invented. How they are built is
-described in [docs/screenshots/README.md](docs/screenshots/README.md).
+All seven are 1080 × 1920 and exist in Persian too — the Persian set is the one live on the app's
+Cafe Bazaar listing. How the sets are built and what the captions claim is described in
+[docs/screenshots/README.md](docs/screenshots/README.md).
 
 ---
 
@@ -69,88 +81,116 @@ leave the phone.
 ## Features
 
 The full catalogue, with the details behind every bullet, is in [docs/FEATURES.md](docs/FEATURES.md).
-This is the short version.
+This is the complete list — the big features and the small ones.
 
 ### File manager
 - Internal storage and SD card, list and grid views, a tappable breadcrumb to jump to any folder
 - Sort by name, date, size or type, in both directions; global search across the whole storage
 - Multi-select, range select ("first to last"), copy, move, delete, rename, share, properties
 - Copy/move sheet with its own breadcrumb, new folder, hidden files
-- Seven categories — audio, video, images, documents, downloads, APKs, archives — plus a live storage card
-- Recent files (last five days) with its own type filter, open-containing-folder and properties
+- Eight categories — audio, video, images, documents, downloads, APKs, archives, all files — plus a live storage
+  card (used / free / total) on the home screen
+- Recent files (last five days) with its own type filter, open-containing-folder and properties, and
+  an honest note when the storage was too large to scan completely
 - Compress to ZIP, encrypt to `.enx`, decrypt, install an APK from the same list
 - Built-in PDF and text viewer, so a document never has to leave the app
-- Recycle bin: deleted files stay recoverable for up to 30 days
-- Storage analysis: biggest folders, biggest files, split by kind (torrent files included); duplicate-file finder
+- Recycle bin: deleted files stay recoverable for up to 30 days, with a countdown
+- Storage analysis: biggest folders, biggest files, split by kind (torrent files included); duplicate-file
+  finder that moves the extras to the recycle bin
 
 ### Tags
-- Tag any file the moment you see it: from the file list, from Now Playing, or from the video/photo viewer
-- Tag several files at once; a tag picker that shows "3 of 5" when only part of the selection already has it
-- Ten colours, assigned automatically; rename, delete (files stay), search, five sort orders including
-  "recently tagged"
+- Tag any file the moment you see it — from the file list (long-press → select → the tag button in the
+  selection bar), from Now Playing, or from the video/photo viewer. There is no cap on how many tags a
+  single file can carry
+- Bulk tagging: select many files and apply a tag in one action; the picker shows "3 of 5" when only
+  part of the selection already has it, and chips show all / some / none
+- Ten colours, assigned automatically; create (also from inside the picker), rename, delete — deleting
+  a tag never deletes files, the dialog says so
+- Duplicate tag names are rejected (Arabic/Persian look-alike characters are normalised first)
+- Search inside the tag list; five sort orders: most items, fewest items, newest, oldest, recently tagged
 - Play a whole tag: music only, or all its media, with the same nine orders and the same resume
 - **MultiTagPlay**: long-press several tags and play them as one queue; a file that belongs to two
-  selected tags is played once, not twice
+  selected tags is played once, not twice; "continue previous playback" and "select all" honour the
+  current tag search
 
 ### Music and video
-- Library with silent refresh, queue, "add to queue", playback speed, sleep timer
-- Equalizer with presets, bass boost and a virtualizer; always-visible mini player
-- Background playback with notification controls; repeat off / all / one; shuffle
-- Play a whole folder, subfolders included, in nine orders: name A→Z, name Z→A, date newest,
-  date oldest, size largest, size smallest, least played, most played, fully random
-- "Continue previous playback": the queue, the order and the kind filters are saved per folder,
-  archive and tag, so the menu offers "continue at 7 of 42 · least played"
-- A play is counted only after 10 seconds or 25 % progress, so "least played" and "most played" mean
-  something real instead of counting every tap on Next
+- Library with silent refresh, queue, "add to queue", playback speed (0.25×–3.0×), sleep timer with
+  remaining time, repeat off / all / one, shuffle
+- Equalizer with presets, bass boost and a virtualizer, plus a reset; always-visible mini player
+- Background playback with notification controls; notifications follow the app language
+- Play a whole folder (subfolders included, up to 24 levels and 20,000 files — and it says so when a
+  limit is actually hit) in nine orders: name A→Z, name Z→A, date newest, date oldest, size largest,
+  size smallest, least played, most played, fully random
+- Kind filter chips (music / video / images) with counts, switchable before you press play
+- "Continue previous playback": the queue, order, kind filter and current item are saved per folder,
+  archive, tag and multi-tag set — the menu offers "continue at 7 of 42 · least played"
+- A play is counted only after 10 seconds or 25 % progress, so "least played" means something real
 - Video player: horizontal drag to seek, vertical drag for volume and brightness, swipe-seek range
-  0.5–20 %, touch lock, aspect ratio (fit / crop / stretch), hold for 2×, audio and subtitle track
-  selection, fullscreen without system bars, manual rotation, picture-in-picture, one-tap screenshot,
-  end-of-video behaviour, companion media
-- Trim, crop, rotate and merge clips without a PC
+  0.5–20 %, double-tap pause/play, hold for 2×, touch lock, aspect ratio (fit / crop / stretch),
+  audio and subtitle track selection, fullscreen without system bars, manual rotation,
+  picture-in-picture, one-tap screenshot, end-of-video behaviour (replay / stop / next), companion
+  media, crop and trim straight from the player
 
-### Browser and downloads
-- Tabs, tab groups with eight colours (drag a card onto a group), incognito tabs, closed tabs restorable
-  for 24 hours, session restore with the exact scroll position
-- Tab bar in five positions (top, bottom, left, right, hidden), favicon-only tabs, bottom action bar
-- Ad blocking from a list of common ad domains plus ad-slot hiding; data saver that holds back heavy
-  images and video until you tap Load all, with a live counter of how many items it blocked
-- Do Not Track and Sec-GPC headers, clear history/cache/cookies on exit
-- Home page with editable shortcuts, custom search-engine pattern, find-in-page, per-site zoom,
-  desktop mode, default text size, HTTPS/HTTP indicator
-- Bookmarks, history, weekly visit and download stats, most visited sites
+### Browser (Baloch Core)
+- Rendering by the system Chromium WebView; tabs, blocking, privacy and stats are Exployer's own code
+- Tabs, tab previews, tab groups with eight colours — drag a tab card onto a group chip, with undo;
+  closing a group keeps its tabs open and restorable for 24 hours
+- Incognito tabs (nothing is kept), recently closed tabs restorable for 24 hours, session restore with
+  the exact scroll position
+- Tab bar in five positions (top, bottom, left, right, hidden); favicon-only tabs; optional bottom bar
+- Ad blocking from a curated domain list plus ad-slot hiding; data saver that holds back heavy images
+  and video until you tap "Load all" (off by default)
+- Optional Do Not Track / Sec-GPC switch (off by default); clear history, cache and cookies on exit
+- Home page with editable shortcuts, custom search-engine pattern, find-in-page, per-site zoom that can
+  be remembered, desktop mode, default text size, HTTPS/HTTP indicator
+- Bookmarks, history, browser insights (total and weekly visits and downloads, most visited sites)
 - Per-site camera, microphone and location permission (ask / allow / deny) with a management screen
-- Media sniffer: a draggable floating bubble or an address-bar icon lists every video and audio stream on
-  the current page with its exact size — the list is per page, so moving to the next page does not mix
-  in the old streams. Rename before downloading, copy the direct link, rescan
-- Download queue with percentage, speed, size and ETA; queue position; 1–15 files at once or unlimited
-- Resumes from the exact byte, 3–30 automatic retries (or unlimited) with a custom delay between tries
-- Scheduled downloads: date, time, retry count, delay, stop policy and a deadline; schedules survive
-  reboots and app kills
-- "Already downloaded" and "already in queue" warnings, real checksum verification of the finished file
-- Clear error messages instead of silent failures: DRM, 403/404, an HTML page instead of a file, network,
-  low storage, conversion failure, deadline reached
-- HLS (M3U8) and DASH support, a capture fallback, and a custom download folder
-- Pause or resume all downloads at once, clear the finished list, battery-optimisation shortcut
+- Media sniffer: a draggable floating bubble or an address-bar icon lists every video and audio stream
+  on the current page with its exact size — per page, so the next page never mixes in old streams;
+  rename before downloading, copy the direct link, rescan
 
-### Photos, archives and privacy
-- Photo editor: free crop, rotate, exposure, contrast, highlights, shadows, saturation, vibrance,
-  temperature, tint, tone curve with free control points, six filters, heal brush, perspective fix,
-  undo/redo, automatic draft, save beside the original or to `Download/Exployer/Edit`
+### Downloads
+- Queue with percentage, speed, size, ETA and queue position; 1–15 files at once, or unlimited
+- Resumes from the exact byte (Range request, not a restart)
+- 3–30 automatic retries (or unlimited) with an optional custom delay; a stop policy decides whether
+  the engine keeps trying, stops on the first error, or stops at a deadline
+- Scheduled downloads: date, time, retry count, delay, stop policy and deadline; schedules survive
+  app kills and reboots
+- "Already downloaded" and "already in queue" detection; real checksum verification of the finished file
+- Honest error messages: DRM-protected, 403/404, an HTML page instead of a file (anti-leech), network,
+  storage full, conversion failure, deadline reached — each with the next step to take
+- HLS (M3U8) and DASH support, a capture fallback, custom download folder (default `Downloads/Exployer`)
+- Pause or resume everything at once, per-item pause/start/retry/open/share/delete, batch selection,
+  clear the finished list, All / Active / Scheduled tabs, sorting by progress, speed or status
+- Download notifications with progress and controls while the app is closed
+
+### Photo and video editor
+- Free crop with output pixel size shown, rotate
+- Eight light and colour sliders: exposure, contrast, highlights, shadows, saturation, vibrance,
+  temperature, tint
+- Tone curve with free control points, plus ready-made curves; six filters
+- Heal brush with adjustable size, last-stroke undo; perspective correction by dragging four corners
+- Undo and redo; automatic draft so leaving the editor does not lose the work
+- Three save targets: beside the original, `Download/Exployer/Edit`, or replace the original (the
+  previous copy goes to the recycle bin)
 - Video editor: trim, crop, rotate, merge clips with dimension normalisation, background export with a
   progress notification — close the editor and the file is still built
-- ZIP reader without extraction: browse an archive like a folder, extract the folder you are in or a
-  single file, paste files into an archive, Zip-Slip protection, fast opening of very large archives,
-  and play the media inside an archive with the same nine orders
-- Encryption: chunked AES-256-GCM with PBKDF2 and the `.enx` extension, plus an encrypted folder
-  container you can open and browse like a normal folder. Old `.enc` files still open — rename them
-  to `.enx`
-- Password vault with a master password, instant lock and master-password change
 
-### Look and language
-- System, light or dark theme, five accent palettes
-- Eight languages: Persian, English, Spanish, Brazilian Portuguese, Indonesian, Hindi, Arabic, Urdu
-  (plus "system language")
-- Full right-to-left layout and Persian typography review
+### ZIP reader, encryption, privacy
+- Browse an archive like a folder without extracting; extract the current folder or a single file with
+  byte-based progress; paste files into an archive; Zip-Slip protection; fast opening of very large
+  archives; play the media inside an archive with the same nine orders (it asks before extracting)
+- `.enx` encryption: chunked AES-256-GCM with a PBKDF2-derived key, plus an encrypted folder container
+  you can open and browse like a normal folder after one password prompt; old `.enc` files still open
+- Password vault: a master password you set once, entries with site / username / password / note,
+  instant lock, master-password change; the master password is never stored
+
+### Look, language and ads
+- System / light / dark theme, five accent palettes
+- Eight languages: Persian, English, Spanish, Brazilian Portuguese, Indonesian, Hindi, Arabic, Urdu —
+  independent of the phone's language, applied to notifications too; full right-to-left layout
+- Free and supported by ads (Tapsell): one completed rewarded video turns ads off for 24 hours, five
+  videos within those 24 hours turn them off for a week; the counter warns before it resets
 
 ## Install
 
@@ -214,7 +254,7 @@ Every release and what changed, including the full 0.9.91 → 0.9.103 list: [CHA
 ## Support
 
 - Bugs and feature requests: [open an issue](https://github.com/balochscript/Exployer-App/issues)
-- Email: balochscript@gmail.com
+- Email: balochscriptcom@gmail.com
 - Website: [balochscript.com](https://balochscript.com)
 
 <sub>Exployer is made by Baloch Script. Android is a trademark of Google LLC. This project is not affiliated with Google.</sub>

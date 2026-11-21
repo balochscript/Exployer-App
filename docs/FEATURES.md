@@ -116,7 +116,8 @@ downloads — is Exployer's own code, and the user agent identifies itself as Ba
   that hides common ad slots. It is a first line of defence, not a full subscription-based blocking engine.
 - **Data saver**: heavy images and media on a page are held back until you tap "Load all", and the toolbar
   shows how many items were blocked on the current page.
-- **Privacy**: Do Not Track and Sec-GPC headers on every request; clear history, cache and cookies on exit.
+- **Privacy**: an optional Do Not Track / Sec-GPC switch (off by default) that sends both headers on
+  every request when enabled; clear history, cache and cookies on exit.
 - **Home page**: either the built-in Baloch Core page or a blank page; shortcuts can be edited; a custom
   search-engine template can be entered (`%s` is replaced by the query).
 - **Find in page**: next and previous match.

@@ -19,6 +19,9 @@ Two files, same features: `exployer-0.9.103.apk` (9.1 MB, optimised with R8) and
   queue. A file shared by two selected tags is played once, not twice. The selection bar offers
   "select all" (honouring the current tag search), the order menu keeps all nine orders, and the queue
   remembers its own filters separately from single-tag playback.
+- **Quick tagging while you browse** — long-press a file in the list, select it and tap the tag button
+  in the selection bar; the same tag action also lives in the video/photo viewer and on Now Playing.
+  There is no cap on how many tags a single file can carry.
 - **New encryption format `.enx` (AES-256-GCM, chunked) with an encrypted folder container** — a folder
   encrypted with Exployer can now be opened and browsed like any other folder, file by file, after one
   password prompt. Files are sealed in chunks, so a very large file no longer has to be read into memory

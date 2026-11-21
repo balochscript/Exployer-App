@@ -47,4 +47,4 @@ The app is not directed at children under 13.
 
 ## Contact
 
-Questions about this policy: **balochscript@gmail.com**
+Questions about this policy: **balochscriptcom@gmail.com**
